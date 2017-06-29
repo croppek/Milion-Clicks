@@ -1,0 +1,74 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+//Część lewego pojemnika głównego z polem tekstowym
+.searchBar {
+   margin-bottom: 50px;
+   
+   & input[type=text] {
+      display: block;
+      box-sizing: border-box;
+      width: 70%;
+      margin: 0 auto 10px;
+      padding: 5px 25px;
+      outline: none;
+      font-size: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      background-color: rgba($white, .9);
+      
+      @include setBorder(3px, solid, rgba($black, .0));
+      border-radius: 10px;
+      
+      &:focus {
+         @include setBorder(3px, solid, $mint-green);   
+      } 
+      
+      &:hover {
+         background-color: rgba($white, .8);
+      }
+   }
+   
+   //Miejsce na wyświetlanie błędów
+   & #errorMessage {
+      font-size: 15px;
+      font-weight: $narrow;
+      color: rgba($red, .8);
+      width: 80%;
+      margin: 0 auto 5px;
+      min-height: 30px;
+      box-sizing: border-box;
+      padding: 5px;
+      letter-spacing: 1px;
+      display: none;
+   }
+   
+   // Przycisk "SZUKAJ"
+   & button {
+      box-sizing: border-box;
+      width: 150px;
+      height: 50px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      font-weight: $bold;
+      cursor: pointer;
+      font-size: 18px;
+      outline: none;
+      background-color: rgba($white, .75);
+      color: rgba($black, .75);
+      transition: all 0.3s, box-shadow 0.1s;
+      
+      @include setBorder(3px, solid, rgba($black, .8));
+      
+      &:hover, &:focus {
+         background-color: $mint-green;
+         color: rgba($white, .8);
+      }
+      
+      &:active {
+         box-shadow: inset 0px 0px 15px 0px rgba($black, .8);
+      }
+   }
+   
+}

@@ -1,0 +1,24 @@
+@import 'base/reset';
+@import 'base/typography';
+@import 'helpers/variables';
+@import 'helpers/mixins';
+@import 'helpers/placeHolders';
+
+// Body i główne divy, w których renderowana jest aplikacja przez React.js
+body {
+   @extend %default-typography;
+   @extend %overflowY;
+   
+   background-color: red;
+   
+   #app {
+      
+      @extend %fillParent;
+      
+      .wrapper {
+	      @include displayFlex(row, center, wrap);
+      
+         @extend %fillParent;
+      }
+   }
+}

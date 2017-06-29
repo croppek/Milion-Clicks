@@ -1,0 +1,15 @@
+@import '../helpers/variables';
+
+//Główne pojemniki
+.container {
+	display: block;
+   width: 600px;
+   height: 700px;
+   max-height: 700px;
+   margin: 50px 15px;
+   text-align: center;
+   padding: 25px;
+   box-sizing: border-box;
+   border-radius: 10px;
+   background-color: rgba($black, 0.2);
+}

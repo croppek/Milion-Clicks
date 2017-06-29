@@ -1,0 +1,14 @@
+@import 'variables';
+
+// Ustawienie flexboxa 
+@mixin displayFlex($direction: row, $positionContent: flex-start, $wrap: wrap) {
+   display: flex;
+   flex-direction: $direction;
+   justify-content: $positionContent;
+   flex-wrap: $wrap;
+}
+
+// Ustawienie obramowania
+@mixin setBorder($thick: 2px, $type: solid, $color: $black) {
+   border: $thick $type $color;
+}
